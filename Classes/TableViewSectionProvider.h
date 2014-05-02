@@ -26,10 +26,6 @@ extern const CGFloat kCueTableViewFooterHeight;
 - (void)update;
 
 @optional
-// These three didn't work out at all. Stop using them.
-- (NSString *)reuseIdentifierForCellAtRow:(NSUInteger)row __attribute__((deprecated));
-- (UITableViewCell*)tableView:(UITableView *)tableView initializeCellAtRow:(NSUInteger)row __attribute__((deprecated));
-- (UITableViewCell*)tableView:(UITableView *)tableView updateCell:(UITableViewCell*)cell row:(NSUInteger)row __attribute__((deprecated));
 
 // Stick with this one.
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRow:(NSUInteger)row;
