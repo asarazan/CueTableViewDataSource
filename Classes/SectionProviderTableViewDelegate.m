@@ -92,9 +92,11 @@ const CGFloat kCueTableViewFooterHeight = 36.0f;
 {
 }
 
-- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(CGPoint *)targetContentOffset;
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset;
 {
+
 }
+
 
 #pragma mark - Table view data source
 
@@ -108,39 +110,14 @@ const CGFloat kCueTableViewFooterHeight = 36.0f;
     return [[self.providers objectAtIndex:section] numberOfRowsInTableView:tableView];
 }
 
-
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated"
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
     NSInteger row = indexPath.row;
     NSInteger section = indexPath.section;
 
     id<TableViewSectionProvider> provider = [self.providers objectAtIndex:section];
-    if ([provider respondsToSelector:@selector(tableView:updateCell:row:)]) {
-        NSString * identifier = @"Cell";
-        if ([provider respondsToSelector:@selector(reuseIdentifierForCellAtRow:)]) {
-            identifier = [provider reuseIdentifierForCellAtRow:row];
-        }
-
-        UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-        if (!cell) {
-            if ([provider respondsToSelector:@selector(tableView:initializeCellAtRow:)]) {
-                cell = [provider tableView:tableView initializeCellAtRow:row];
-            } else {
-                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-            }
-        }
-
-        cell = [provider tableView:tableView updateCell:cell row:row];
-        return cell;
-    }
-
     return [provider tableView:tableView cellForRow:row];
 }
-
-#pragma clang diagnostic pop
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section;
 {

@@ -21,14 +21,12 @@ extern const CGFloat kCueTableViewFooterHeight;
 @protocol TableViewSectionProvider <NSObject>
 
 @required
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRow:(NSUInteger)row;
 - (NSInteger)numberOfRowsInTableView:(UITableView *)tableView;
 - (void)setSection:(NSInteger)section;
 - (void)update;
 
 @optional
-
-// Stick with this one.
-- (UITableViewCell*)tableView:(UITableView *)tableView cellForRow:(NSUInteger)row;
 
 - (UIView*)viewForHeaderInTableView:(UITableView *)tableView;
 - (UIView*)viewForFooterInTableView:(UITableView *)tableView;
