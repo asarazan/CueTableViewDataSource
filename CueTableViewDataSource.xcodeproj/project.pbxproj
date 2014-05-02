@@ -28,11 +28,11 @@
 		90D0DF8517C42518004E6B9A /* libCueTableViewDataSource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCueTableViewDataSource.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D0DF8817C42518004E6B9A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		90D0DF8C17C42518004E6B9A /* CueTableViewDataSource-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CueTableViewDataSource-Prefix.pch"; sourceTree = "<group>"; };
-		90D0DF9A17C4254F004E6B9A /* SectionProviderTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionProviderTableViewDelegate.h; sourceTree = SOURCE_ROOT; };
-		90D0DF9B17C4254F004E6B9A /* SectionProviderTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionProviderTableViewDelegate.m; sourceTree = SOURCE_ROOT; };
-		90D0DF9E17C4254F004E6B9A /* TableViewSectionProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewSectionProvider.h; sourceTree = SOURCE_ROOT; };
-		90D0DF9F17C4254F004E6B9A /* TableViewSectionProviderImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewSectionProviderImpl.h; sourceTree = SOURCE_ROOT; };
-		90D0DFA017C4254F004E6B9A /* TableViewSectionProviderImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewSectionProviderImpl.m; sourceTree = SOURCE_ROOT; };
+		90D0DF9A17C4254F004E6B9A /* SectionProviderTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SectionProviderTableViewDelegate.h; path = Classes/SectionProviderTableViewDelegate.h; sourceTree = SOURCE_ROOT; };
+		90D0DF9B17C4254F004E6B9A /* SectionProviderTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SectionProviderTableViewDelegate.m; path = Classes/SectionProviderTableViewDelegate.m; sourceTree = SOURCE_ROOT; };
+		90D0DF9E17C4254F004E6B9A /* TableViewSectionProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewSectionProvider.h; path = Classes/TableViewSectionProvider.h; sourceTree = SOURCE_ROOT; };
+		90D0DF9F17C4254F004E6B9A /* TableViewSectionProviderImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewSectionProviderImpl.h; path = Classes/TableViewSectionProviderImpl.h; sourceTree = SOURCE_ROOT; };
+		90D0DFA017C4254F004E6B9A /* TableViewSectionProviderImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewSectionProviderImpl.m; path = Classes/TableViewSectionProviderImpl.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +50,8 @@
 		90D0DF7C17C42517004E6B9A = {
 			isa = PBXGroup;
 			children = (
-				90D0DF8A17C42518004E6B9A /* CueTableViewDataSource */,
+				90D0DF8B17C42518004E6B9A /* Supporting Files */,
+				90D0DF8A17C42518004E6B9A /* Classes */,
 				90D0DF8717C42518004E6B9A /* Frameworks */,
 				90D0DF8617C42518004E6B9A /* Products */,
 			);
@@ -72,7 +73,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		90D0DF8A17C42518004E6B9A /* CueTableViewDataSource */ = {
+		90D0DF8A17C42518004E6B9A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				90D0DF9A17C4254F004E6B9A /* SectionProviderTableViewDelegate.h */,
@@ -80,9 +81,8 @@
 				90D0DF9E17C4254F004E6B9A /* TableViewSectionProvider.h */,
 				90D0DF9F17C4254F004E6B9A /* TableViewSectionProviderImpl.h */,
 				90D0DFA017C4254F004E6B9A /* TableViewSectionProviderImpl.m */,
-				90D0DF8B17C42518004E6B9A /* Supporting Files */,
 			);
-			path = CueTableViewDataSource;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		90D0DF8B17C42518004E6B9A /* Supporting Files */ = {
@@ -91,6 +91,7 @@
 				90D0DF8C17C42518004E6B9A /* CueTableViewDataSource-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
